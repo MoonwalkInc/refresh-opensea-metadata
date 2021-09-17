@@ -4,7 +4,7 @@ const axios = require('axios');
 const contractAddress = "0x50.........";
 const tokenIds = {
     start: 1,
-    end: 1000
+    end: 10
 }
 // END  - - - - - - - - - - - -
 
@@ -18,10 +18,10 @@ while (currentTokenId <= tokenIds.end) {
 
     axios(config)
         .then(function (response) {
-            console.info(`[success] refreshed metadata: ${response.config.url}`)
+            console.info(`[😋success] refreshed metadata: ${response.config.url}`)
         })
         .catch(function (error) {
-            console.error(`[!!!!!!!] error refreshing metadata: ${error.response.config.url}`)
+            console.error(`[🤬!!!!!!!] error refreshing metadata: ${error.response.config.url}`)
         });
     currentTokenId++
 }
